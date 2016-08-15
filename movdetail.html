@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Movie DB</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+<script src="movie.js" type="text/javascript"></script>
+
+				
+<script>		//Getting the id of a particular movie
+	function geturl(){
+		var loc=window.location.href ;
+		param=loc.substr(loc.indexOf("?")+1);
+		movieid=param.substr(param.indexOf("movieid=")+8);
+		//alert(movieid);
+		movieDetail(movieid);		//calling the detailed function using the id as parameter
+	}
+</script>
+ 
+</head>
+ 
+<body onload="geturl();">
+  <!--Displaying required info-->
+  <h2 id='movietiltle'></h2>		
+  <div id='backdropimg'></div>
+  <div id='releasedate'></div>
+  <div id='overview'></div>
+  <div id='cast'></div>
+  <div id='crew'></div>
+  
+	
+</body>
+</html>
